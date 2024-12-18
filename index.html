@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pirate Card Maker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<body>
+  <div class="main-container">
+    <header>
+      <h1>Pirate Card Maker</h1>
+      <p>Unleash your inner pirate!</p>
+    </header>
+
+    <div class="card active" id="card-1">
+      <h2>Step 1: Create Your Pirate Name</h2>
+      <input type="text" id="name-input" placeholder="Enter your name...">
+      <button id="generate-name-btn">Generate Pirate Name</button>
+      <p id="pirate-name-preview"></p>
+      <button class="next-btn" data-next="2" style="display:none;">Confirm Name</button>
+    </div>
+
+    <div class="card" id="card-2">
+      <h2>Step 2: Choose Your Pirate Avatar</h2>
+      <div class="avatar-grid">
+        <img src="pirate1.png" alt="Pirate 1" class="avatar" data-avatar="1">
+        <img src="pirate2.png" alt="Pirate 2" class="avatar" data-avatar="2">
+        <img src="pirate3.png" alt="Pirate 3" class="avatar" data-avatar="3">
+        <img src="pirate4.png" alt="Pirate 4" class="avatar" data-avatar="4">
+        <img src="pirate5.png" alt="Pirate 5" class="avatar" data-avatar="5">
+        <img src="pirate6.png" alt="Pirate 6" class="avatar" data-avatar="6">
+        <img src="pirate7.png" alt="Pirate 7" class="avatar" data-avatar="7">
+        <img src="pirate8.png" alt="Pirate 8" class="avatar" data-avatar="8">
+      </div>
+      <button class="next-btn" data-next="3" style="display:none;">Confirm Avatar</button>
+    </div>
+
+    <div class="card" id="card-3">
+      <h2>Step 3: Pick Your Pirate Story</h2>
+      <p id="pirate-story"></p>
+      <button id="generate-story-btn">Generate Story</button>
+      <button class="next-btn" data-next="4" style="display:none;">Confirm Story</button>
+    </div>
+
+    <div class="card" id="card-4">
+      <h2>Your Pirate Profile Card</h2>
+      <div class="final-card">
+        <p id="final-pirate-name"></p>
+        <img id="final-avatar" src="" alt="Pirate Avatar">
+        <p id="final-pirate-story"></p>
+      </div>
+      <button id="restart-btn">Restart</button>
+      <button id="download-btn" style="display:none;">Download Pirate Card</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
